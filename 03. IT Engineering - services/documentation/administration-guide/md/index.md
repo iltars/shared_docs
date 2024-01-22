@@ -85,7 +85,7 @@ common/b1
     ```json
     {
         "_default": {
-            ...
+            
             "exampleParam": "test",
             "playbooks_fpi": "@@include=includes/playbooks.json",
             "exampleParam2": "test2",
@@ -186,7 +186,7 @@ In the source code repository of the `common` distribution, a new ***environment
 The ***__migration-rules.yml*** file is utilized to configure the migration of data from the `common` distribution to the `common` repository for the environment, specifying which files to migrate and the migration process itself.
 
 > [!WARNING]  
-> he files should be located in the directory: `src/main/resources/common`
+> The files should be located in the directory: `src/main/resources/common`
 
 ***__migration-rules.yml*** must contain the following:
 
