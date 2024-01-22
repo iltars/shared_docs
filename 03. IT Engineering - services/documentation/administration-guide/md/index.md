@@ -57,7 +57,6 @@ All possible parameters in the ***environment.json*** file are presented in the 
       "credentials": {
           "openshiftOpsPasswordsCred": "vault_cred_openshift_ops",                                                         
           "SshKeyCreds"         : "_template_",     
-  [...]
 
 }
 ```
@@ -90,11 +89,11 @@ common/b1
             "exampleParam": "test",
             "playbooks_fpi": "@@include=includes/playbooks.json",
             "exampleParam2": "test2",
-            ..
+    
         },
         "ift": "@@include=includes/ift.json"
     }
-    ```
+    
 
 2. Data Source file **_includes/playbooks.json_**
     ```json
@@ -113,10 +112,10 @@ common/b1
 3. Data Source file **_includes/ift.json_**
     ```json
     {
-      ...
+      
       "exampleParam": "anotherValue",
       "exampleParam2": "anotherValue",
-      ...
+      
     }
     ```
 
@@ -124,7 +123,7 @@ common/b1
     ```json
     {
         "_default": {
-            ...
+            
             "exampleParam": "test",
             "playbooks_fpi": [
               {
@@ -137,13 +136,13 @@ common/b1
               }
             ],
             "exampleParam2": "test2",
-            ..
+            
         },
         "ift": {
-          ...
+          
           "exampleParam": "anotherValue",
           "exampleParam2": "anotherValue",
-          ...
+          
         }
     }
     ```
@@ -166,9 +165,9 @@ To switch **Service job** into configuration migration mode it is necessary to s
 
 ```json
 {
-  ...
+  
   "migrateConfigurationWithPipeline": false,
-  ...
+  
 }
 ```
 
@@ -350,9 +349,8 @@ Following the Pipeline update (refer to [**Installation Guide**](../../installat
     "packaging": "zip",             // Default extension for the API test distribution
     "timeout": 100                  // Time limit, after which the automated tests will be stopped and an error message logged
   },
-
-  [...]
-  
+ {
+  }  
 }
 ```
 
