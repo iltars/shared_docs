@@ -321,7 +321,7 @@ To initiate the migration of configurations using the **Service job**, launch it
 # A component to be updated
 ARTIFACT_TYPE: "COMMON"
 # Targeted version
-ARTIFACT_VERSION: <Версия выпущенного ранее дистрибутива коммон>
+ARTIFACT_VERSION: <Version of the previously released `common` distribution>
 # Stage selection (stage – is a specified part of the component that will be updated)
 PARAMETERS:
   - MIGRATION_CONFIGURATION
@@ -333,21 +333,21 @@ Following the Pipeline update (refer to [**Installation Guide**](../../installat
 
 ***subsystems.json*** file contents example:
 
-```json
+```yaml
 {"!__default"       :{						// Default Settings Block. AVOID MAKING ANY CHANGES IN THIS BLOCK — IT IS REGULARLY UPDATED AND OVERWRITTEN
 
-  "classifier": "distrib",					// Classifier of the functional subsystem software distribution in the Nexus repository
-  "groupId": "Nexus_PROD",					// Group ID of the functional subsystem software distribution in the Nexus repository
-  "packaging": "zip",						// File extension with the functional subsystem software distribution
-  "strict": "false",						// Migration mode for functional subsystem settings (true - only files starting with <fpi_name> will be migrated, false - all files will be migrated)
-  "limit": 100,								// Limitation on the number of distribution versions in the Jenkins menu
-  "emailList": ["<email>"],				    // Email addresses for receiving notifications on the status of the AD Pipeline
-  "at": {									// Block with default API test distribution credentials
-    "groupId": "Nexus_PROD",			    // Group ID for the API test distribution
+  "classifier": "distrib",				// Classifier of the functional subsystem software distribution in the Nexus repository
+  "groupId": "Nexus_PROD",				// Group ID of the functional subsystem software distribution in the Nexus repository
+  "packaging": "zip",						  // File extension with the functional subsystem software distribution
+  "strict": "false",						  // Migration mode for functional subsystem settings (true - only files starting with <fpi_name> will be migrated, false - all files will be migrated)
+  "limit": 100,								    // Limitation on the number of distribution versions in the Jenkins menu
+  "emailList": ["<email>"],				// Email addresses for receiving notifications on the status of the AD Pipeline
+  "at": {									        // Block with default API test distribution credentials
+    "groupId": "Nexus_PROD",			// Group ID for the API test distribution
     "branch": "master",						// Default repository branch for API test settings
-    "classifier": "distrib",				// Default classifier for the API test distribution
+    "classifier": "distrib",			// Default classifier for the API test distribution
     "packaging": "zip",						// Default extension for the API test distribution
-    "timeout": 100							// Time limit, after which the automated tests will be stopped and an error message logged
+    "timeout": 100							  // Time limit, after which the automated tests will be stopped and an error message logged
   },
 
   [...]
